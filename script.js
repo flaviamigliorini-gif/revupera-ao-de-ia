@@ -1,63 +1,59 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // Captura os elementos do HTML
+document.addEventListener("DOMContentLoaded", () => {
     const botaoAnalisar = document.getElementById("analisar-btn");
     const inputNoticia = document.getElementById("noticia-input");
     const divResultado = document.getElementById("resultado-analise");
 
-    // Função que analisa o texto digitado pelo aluno
-    botaoAnalisar.addEventListener("click", function() {
+    // Lista de termos comumente associados a desinformação caça-cliques (clickbait)
+    const termosSuspeitos = [
+        "urgente", "repassar", "olha o que aconteceu", "clique aqui", 
+        "meu deus", "milagre", "secreto", "escondido", "cura", 
+        "cancelou as aulas", "vazou", "bomba", "farsa"
+    ];
+
+    botaoAnalisar.addEventListener("click", () => {
         const texto = inputNoticia.value.trim().toLowerCase();
 
-        // Validação se o campo estiver vazio
-        if (texto === "") {
-            divResultado.style.display = "block";
-            divResultado.style.backgroundColor = "#fee2e2"; // fundo vermelho claro
-            divResultado.style.color = "#991b1b";
-            divResultado.style.borderLeft = "5px solid #ef4444";
-            divResultado.innerHTML = "Por favor, digite alguma notícia ou assunto para analisar.";
+        // 1. Validação de campo vazio
+        if (!texto) {
+            exibirResultado(
+                "Por favor, digite alguma notícia ou frase para analisar.",
+                "var(--danger)",
+                "var(--danger-bg)"
+            );
             return;
         }
 
-        // Palavras-chave suspeitas comuns em Fake News e Clickbaits
-        const termosSuspeitos = [
-            "urgente", "repassar", "repassed", "olha o que aconteceu", 
-            "clique aqui", "meu deus", "milagre", "secreto", 
-            "escondido", "cura", "cancelou as aulas", "vazou"
-        ];
+        // 2. Processamento da análise por expressões regulares ou busca de termos
+        const contemTermosSuspeitos = termosSuspeitos.some(termo => texto.includes(termo));
+        const contemPontuacaoExagerada = /(!{2,}|\?{2,})/.test(texto); // Detecta "!!" ou "??"
 
-        let eSuspeito = false;
-
-        // Verifica se o texto contém palavras suspeitas ou pontuação exagerada (!!!)
-        for (let termo of termosSuspeitos) {
-            if (texto.includes(termo) || texto.includes("!!!") || texto.includes("???")) {
-                eSuspeito = true;
-                break;
-            }
-        }
-
-        // Exibe o resultado com base na análise simulada
-        divResultado.style.display = "block";
-
-        if (eSuspeito) {
-            divResultado.style.backgroundColor = "#fef3c7"; // fundo amarelo (alerta)
-            divResultado.style.color = "#92400e";
-            divResultado.style.borderLeft = "5px solid #f59e0b";
-            divResultado.innerHTML = `
-                ⚠️ <strong>ALERTA DE SUSPEITA!</strong><br>
-                Esta notícia possui termos alarmistas, sensacionalistas ou uso excessivo de pontuação. 
-                Mídias manipuladas por IA e Fake News adoram usar títulos chocantes para chamar atenção. 
-                <strong>Recomendação:</strong> Não compartilhe! Busque em sites de checagem confiáveis.
-            `;
+        // 3. Exibição da resposta estruturada
+        if (contemTermosSuspeitos || contemPontuacaoExagerada) {
+            exibirResultado(
+                `⚠️ <strong>ALERTA DE SUSPEITA!</strong><br><br>
+                Esta mensagem contém elementos típicos de desinformação automatizada (termos alarmistas ou pontuação excessiva). 
+                Formatos gerados para viralizar no ambiente escolar costumam apelar para o emocional.<br>
+                <strong>Recomendação:</strong> Não repasse antes de pesquisar em uma fonte oficial de notícias.`,
+                "var(--warning)",
+                "var(--warning-bg)"
+            );
         } else {
-            divResultado.style.backgroundColor = "#dcfce7"; // fundo verde (ok)
-            divResultado.style.color = "#166534";
-            divResultado.style.borderLeft = "5px solid #22c55e";
-            divResultado.innerHTML = `
-                ✓ <strong>ANÁLISE INICIAL CONCLUÍDA</strong><br>
-                O título parece neutro, mas lembre-se: Deepfakes e áudios falsos gerados por IA podem parecer muito reais. 
-                <strong>Próximo passo:</strong> Mesmo parecendo segura, sempre verifique se a notícia foi postada em algum veículo oficial de comunicação antes de repassar.
-            `;
+            exibirResultado(
+                `✓ <strong>ESTRUTURA FORMAL ACEITÁVEL</strong><br><br>
+                O texto não apresenta os gatilhos comuns de pânico ou clickbait.<br>
+                <strong>Atenção:</strong> Lembre-se que conteúdos gerados por IA (áudios e deepfakes) podem imitar perfeitamente canais sérios. Continue exercitando sua cidadania digital e cheque os fatos.`,
+                "var(--success)",
+                "var(--success-bg)"
+            );
         }
     });
+
+    // Função auxiliar para padronizar e suavizar a inserção de estilo dinâmico
+    function exibirResultado(mensagem, corTexto, corFundo) {
+        divResultado.style.display = "block";
+        divResultado.style.color = corTexto;
+        divResultado.style.backgroundColor = corFundo;
+        divResultado.style.borderLeft = `5px solid ${corTexto}`;
+        divResultado.innerHTML = mensagem;
+    }
 });
