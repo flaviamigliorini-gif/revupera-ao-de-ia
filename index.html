@@ -23,73 +23,73 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <main class="container">
 
         <section id="sobre">
             <h2>O que são Deepfakes?</h2>
             <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1100&q=80" alt="Conceito de Inteligência Artificial e manipulação digital" class="image-placeholder">
-            <p><strong>Deepfakes</strong> são vídeos, áudios ou imagens modificados digitalmente por meio de ferramentas avançadas de <strong>Inteligência Artificial (IA)</strong>. Essa tecnologia consegue substituir o rosto ou a voz de uma pessoa real pela de outra, fazendo parecer que ela disse ou fez coisas que, na verdade, nunca aconteceram.</p>
+            <p><strong>Deepfakes</strong> são vídeos, áudios ou imagens modificados digitalmente por meio de ferramentas avançadas de <strong>Inteligência Artificial (IA)</strong>. Essa tecnologia consegue substituir o rosto ou a voz de uma pessoa real pela de outra, fazendo parecer que ela disse ou fez coisas que nunca aconteceram.</p>
             <p>Embora a IA tenha funções incríveis no cinema e na ciência, o seu uso indevido para criar notícias falsas é um dos maiores desafios da nossa geração.</p>
         </section>
 
         <section id="perigos">
             <h2>Os Perigos da Desinformação Automatizada</h2>
-            <p>A união entre Inteligência Artificial e redes sociais permite que robôs e softwares maliciosos criem e espalhem <strong>fake news em massa</strong> em poucos segundos. Isso pode arruinar reputações, influenciar eleições e espalhar pânico desnecessário na comunidade escolar.</p>
+            <p>A união entre Inteligência Artificial e redes sociais permite que sistemas automatizados criem e espalhem <strong>fake news em massa</strong> em poucos segundos. Isso pode arruinar reputações, influenciar a opinião pública e espalhar pânico desnecessário na comunidade escolar.</p>
             
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo explicativo sobre Deepfakes e Desinformação" allowfullscreen></iframe>
             </div>
-            <p style="font-size: 0.9rem; text-align: center; color: #666; margin-top: -10px;"><em>Assista ao vídeo educativo acima para entender como a manipulação digital acontece no cotidiano.</em></p>
+            <p class="video-caption"><em>Assista ao vídeo educativo acima para entender como a manipulação digital acontece no cotidiano.</em></p>
         </section>
 
         <section id="como-identificar">
             <h2>Como Identificar Mídias Manipuladas por IA</h2>
-            <p>Muitas deepfakes já são tão perfeitas que enganam nossos olhos. Mas se você prestar atenção aos detalhes, ainda é possível identificar falhas:</p>
+            <p>Muitas deepfakes já são tão detalhadas que enganam à primeira vista. Mas se você prestar atenção aos detalhes, ainda é possível notar falhas:</p>
             
             <div class="grid">
                 <div class="card danger">
                     <h3>Piscar de olhos incomum</h3>
-                    <p>Muitas ferramentas de IA ainda têm dificuldade em simular o piscar de olhos natural. Repare se a pessoa pisca pouco ou de forma estranha.</p>
+                    <p>Muitas ferramentas de IA ainda têm dificuldade em simular o piscar de olhos natural. Repare se a pessoa pisca muito pouco ou de forma mecânica.</p>
                 </div>
                 <div class="card danger">
                     <h3>Falhas na pele e iluminação</h3>
-                    <p>Bordas ao redor do rosto embaçadas, sombras que mudam de lugar sem sentido ou pele excessivamente lisa são sinais de alerta.</p>
+                    <p>Bordas ao redor do rosto levemente embaçadas, sombras que mudam de lugar sem sentido ou texturas de pele excessivamente lisas são sinais de alerta.</p>
                 </div>
                 <div class="card danger">
-                    <h3>Sincronia labial (Áudio)</h3>
-                    <p>Preste atenção se os movimentos da boca coincidem perfeitamente com as palavras faladas. Erros de atraso são comuns em vídeos falsos.</p>
+                    <h3>Sincronia labial e áudio</h3>
+                    <p>Preste atenção se os movimentos da boca coincidem perfeitamente com o som das palavras. Pequenos atrasos ou roboticidade na voz entregam a IA.</p>
                 </div>
             </div>
         </section>
 
         <section id="simulador">
             <h2>Analisador Educacional de Notícias</h2>
-            <p>Recebeu um link ou notícia chocante no grupo da escola? Cole o título ou o assunto dela abaixo para fazermos uma análise rápida de segurança:</p>
+            <p>Recebeu uma mensagem chocante no grupo da escola? Digite o título ou o assunto dela abaixo para fazer uma análise rápida de segurança:</p>
             
             <div class="simulador-box">
-                <input type="text" id="noticia-input" placeholder="Ex: 'Diretor da escola cancelou as aulas para sempre usando IA' ou cole um link...">
+                <input type="text" id="noticia-input" placeholder="Ex: 'Diretor da escola cancelou as aulas para sempre' ou digite palavras suspeitas...">
                 <button id="analisar-btn">Analisar Confiabilidade</button>
-                <div id="resultado-analise" class="resultado"></div>
+                <div id="resultado-analise" class="resultado" aria-live="polite"></div>
             </div>
         </section>
 
         <section id="seguranca">
             <h2>Guia de Sobrevivência Digital: Boas Práticas</h2>
-            <p>Ser um cidadão digital responsável significa proteger a si mesmo e não compartilhar mentiras. Siga estes passos:</p>
+            <p>Ser um cidadão digital responsável significa proteger a si mesmo e não compartilhar mentiras. Siga estes passos fundamentais:</p>
             
             <ul class="tips-list">
-                <li><strong>Não compartilhe por impulso:</strong> Viu algo chocante ou inacreditável? Respire fundo e verifique se a informação é real antes de enviar.</li>
-                <li><strong>Cheque a fonte original:</strong> Procure a mesma notícia em portais jornalísticos conhecidos ou agências de checagem de fatos (como Lupa ou Fato ou Fake).</li>
-                <li><strong>Proteja sua imagem:</strong> Evite postar fotos e vídeos excessivos de rosto inteiro em perfis públicos. Criminosos usam mídias públicas para treinar softwares de deepfake.</li>
+                <li><strong>Não compartilhe por impulso:</strong> Viu algo chocante? Respire fundo e verifique se a informação é real antes de enviar para os amigos.</li>
+                <li><strong>Cheque a fonte original:</strong> Procure a mesma notícia em portais jornalísticos conhecidos ou agências especializadas em checagem de fatos.</li>
+                <li><strong>Proteja sua imagem:</strong> Evite postar fotos e vídeos excessivos de rosto inteiro com alta qualidade em perfis públicos. Criminosos usam mídias públicas para treinar softwares de deepfake.</li>
                 <li><strong>Fale com um adulto:</strong> Se encontrar um conteúdo suspeito envolvendo colegas ou professores, avise a coordenação da escola ou seus responsáveis imediatamente.</li>
             </ul>
         </section>
 
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 - Projeto Escolar de Cidadania Digital e IA.</p>
-        <p>Desenvolvido para fins educacionais e conscientização da comunidade escolar.</p>
+        <p>Desenvolvido para fins educacionais e conscientização comunitária.</p>
     </footer>
 
     <script src="script.js"></script>
