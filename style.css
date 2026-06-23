@@ -1,15 +1,34 @@
-/* Configurações Gerais */
+/* Variáveis de cores para facilitar o Modo Claro/Escuro */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #2c3e50;
+    --card-bg: #ffffff;
+    --primary-color: #3498db;
+    --accent-color: #e74c3c;
+    --footer-bg: #2c3e50;
+    --footer-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f7f6;
+    --card-bg: #2c2c2c;
+    --primary-color: #5dade2;
+    --footer-bg: #111111;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
-    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -18,70 +37,46 @@ body {
     margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    align-items: center;
-}
-
-.section {
-    padding: 60px 0;
-}
-
-.bg-light { background-color: #f4f6f9; }
-.bg-dark { background-color: #1a252f; }
-.text-light { color: #fff; }
-.text-center { text-align: center; }
-.hidden { display: none; }
-
-/* Cabeçalho */
+/* Header */
 header {
-    background-color: #fff;
+    background-color: var(--card-bg);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 15px 0;
+    padding: 20px 0;
+    transition: background-color 0.3s;
 }
 
-header .container {
+.header-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1 {
-    font-size: 1.5rem;
-    color: #2c3e50;
+header h1 span {
+    color: var(--primary-color);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #3498db;
-}
-
-/* Banner Principal */
-.hero {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
+#theme-toggle {
+    background-color: var(--primary-color);
     color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
-    padding: 100px 0;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(231, 76, 60, 0.1));
+    border-radius: 10px;
+    margin: 40px 0;
 }
 
 .hero h2 {
@@ -89,126 +84,83 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 1.2rem;
+/* Seção de Conteúdo (Dois lados) */
+.content-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-content h3 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px 0;
+    color: var(--primary-color);
+}
+
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.caption {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Cards Grid */
+.guide-section h3 {
+    font-size: 2rem;
+    text-align: center;
     margin-bottom: 30px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #e74c3c;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #c0392b;
-}
-
-/* Vídeos e Imagens */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-}
-
-.image-placeholder img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Cards de Perigo */
-.card-container {
-    margin-top: 30px;
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
 }
 
 .card {
-    background: white;
+    background-color: var(--card-bg);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 4px solid #3498db;
+    border-top: 4px solid var(--accent-color);
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-.card h3 {
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: var(--accent-color);
 }
 
-/* Lista */
-.check-list li {
-    list-style: none;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 25px;
-}
-
-.check-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #2ecc71;
-    font-weight: bold;
-}
-
-/* Quiz Interativo */
-.quiz-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 30px auto 0 auto;
-}
-
-#pergunta {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.quiz-btn {
-    display: block;
-    width: 100%;
-    background: #fff;
-    color: #2c3e50;
-    border: none;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: left;
-    font-size: 1rem;
-    transition: background 0.2s;
-}
-
-.quiz-btn:hover {
-    background: #e1e1e1;
-}
-
-#resultado {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Rodapé */
+/* Footer */
 footer {
-    background: #111;
-    color: #777;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
     padding: 20px 0;
-    font-size: 0.9rem;
+    margin-top: auto;
 }
