@@ -3,64 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital & Inteligência Artificial</title>
+    <title>Portal Cidadania Digital & IA - Desinformação e Deepfakes</title>
+    <meta name="description" content="Explore o impacto das deepfakes e da desinformação na sociedade moderna e aprenda pilares essenciais da cidadania digital.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Cidadania Digital & IA</h1>
-            <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="container nav-flex">
+            <a href="#" class="logo">Cidadania<span>Digital</span></a>
+            <ul class="nav-links">
+                <li><a href="#contexto">O Desafio</a></li>
+                <li><a href="#impactos">Impactos</a></li>
+                <li><a href="#deteccao">Como Detectar</a></li>
+                <li><a href="#combate">Combate & Ética</a></li>
+                <li><a href="#interativo">Guia Prático</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-banner">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge">Especial Inteligência Artificial</span>
+                <h1>O Impacto das Deepfakes na Sociedade</h1>
+                <p>A linha entre o real e o artificial nunca foi tão tênue. Entenda como a desinformação moldada por algoritmos desafia democracias, reputações e a nossa confiança no ambiente digital.</p>
+                <a href="#contexto" class="btn-primary">Iniciar Leitura</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&h=450&q=80" 
+                     alt="Representação abstrata de redes neurais artificiais e fluxos de dados digitais"
+                     width="600"
+                     height="450"
+                     loading="eager">
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero-section" aria-labelledby="hero-title">
-            <div class="hero-text">
-                <h2 id="hero-title">O Desafio da Verdade na Era Digital</h2>
-                <p>Com o avanço da Inteligência Artificial, a criação de conteúdos falsos extremamente realistas — as chamadas <strong>deepfakes</strong> — tornou-se um dos maiores desafios para a desinformação e a segurança digital hoje.</p>
+    <main>
+        
+        <section id="contexto" class="section-padding" aria-labelledby="title-contexto">
+            <div class="container grid-dois-campos">
+                <div class="imagem-lado">
+                    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=600&h=400&q=80" 
+                         alt="Cadeias de blocos de dados criptografados e segurança cibernética" 
+                         width="600" 
+                         height="400" 
+                         loading="lazy">
+                </div>
+                <div class="texto-lado">
+                    <h2 id="title-contexto">O que são Deepfakes e como funcionam?</h2>
+                    <p>O termo <strong>deepfake</strong> surge da junção de <em>Deep Learning</em> (Aprendizado Profundo) e <em>Fake</em> (Falso). Trata-se de uma tecnologia baseada em Inteligência Artificial que utiliza Redes Adversariais Generativas (GANs) para sobrepor rostos, sintetizar vozes e clonar trejeitos corporais de forma assustadoramente realista.</p>
+                    <p>Enquanto duas redes neurais competem entre si — uma criando a falsificação e a outra tentando detectá-la —, o sistema se aprimora de forma autônoma até gerar um resultado praticamente indistinguível a olho nu.</p>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&h=400&q=80" 
-                     alt="Conexões de redes neurais iluminadas em um fundo escuro, representando a inteligência artificial"
-                     loading="lazy"
-                     width="600"
-                     height="400">
+        </section>
+
+        <section id="impactos" class="section-padding bg-light" aria-labelledby="title-impactos">
+            <div class="container text-center">
+                <h2 id="title-impactos">Os Riscos à Ordem Democrática e Social</h2>
+                <p class="section-subtitle">A manipulação audiovisual ultrapassa o campo do entretenimento e gera ameaças reais.</p>
+                
+                <div class="content-grid">
+                    <article class="card">
+                        <div class="card-icon">🗳️</div>
+                        <h3>Desestabilização Política</h3>
+                        <p>Vídeos falsos de líderes políticos podem ser lançados às vésperas de eleições para manipular o eleitorado, inflamando discursos de ódio antes que mecanismos de checagem consigam agir.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Difamação e Golpes</h3>
+                        <p>A tecnologia tem sido usada de forma prejudicial na criação de falsas evidências criminais, fraudes de engenharia social (clonagem de voz para extorsão) e violação de privacidade.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">⚠️</div>
+                        <h3>O Dividendo do Mentiroso</h3>
+                        <p>O perigo não reside apenas em fazer o público acreditar em algo falso, mas também em permitir que figuras públicas aleguem que eventos reais e documentados são "deepfakes" para se esquivarem de responsabilidades.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="content-grid" aria-label="Informações sobre Deepfakes e Cidadania">
-            <article class="card">
-                <h3>O que são Deepfakes?</h3>
-                <p>São vídeos, áudios ou fotos criados por redes neurais artificiais que substituem o rosto ou a voz de uma pessoa pela de outra, fazendo-a parecer dizer ou fazer coisas que nunca aconteceram.</p>
-            </article>
-
-            <article class="card">
-                <h3>Impacto na Sociedade</h3>
-                <p>A desinformação em massa pode manipular opiniões, manchar reputações, interferir em processos democráticos e minar a confiança geral nos meios de comunicação tradicionais.</p>
-            </article>
-
-            <article class="card">
-                <h3>Cidadania Digital</h3>
-                <p>Ser um cidadão digital consciente significa desenvolver senso crítico: checar fontes, não compartilhar conteúdos duvidosos e entender o papel da tecnologia no nosso dia a dia.</p>
-            </article>
-        </section>
-
-        <section class="quiz-section" aria-labelledby="quiz-title">
-            <h3 id="quiz-title">Dica de Segurança Interativa</h3>
-            <p>Como você avalia uma informação que recebe nas redes sociais?</p>
-            <button id="btn-dica" type="button">Receber um conselho de checagem</button>
-            
-            <div id="painel-dica" class="hidden" role="region" aria-live="polite" aria-labelledby="quiz-title">
-                <p id="texto-dica"></p>
+        <section id="deteccao" class="section-padding" aria-labelledby="title-deteccao">
+            <div class="container">
+                <div class="grid-dois-campos inverter-ordem">
+                    <div class="texto-lado">
+                        <h2 id="title-deteccao">Desenvolvendo Olhar Clínico: Sinais de Inconsistência</h2>
+                        <p>Embora os algoritmos evoluam rapidamente, muitas produções sintéticas ainda deixam rastros sutis que podem ser percebidos com atenção:</p>
+                        <ul class="lista-checagem">
+                            <li><strong>Padrão de piscada:</strong> Rostos gerados artificialmente costumam piscar menos ou de forma irregular.</li>
+                            <li><strong>Iluminação e Sombras:</strong> Desajustes entre a iluminação do rosto em primeiro plano e o cenário de fundo.</li>
+                            <li><strong>Bordas borradas:</strong> Pequenas distorções na linha do cabelo, orelhas ou contorno da mandíbula.</li>
+                            <li><strong>Sincronia labial:</strong> Falhas entre o áudio pronunciado e os movimentos musculares da boca.</li>
+                        </ul>
+                    </div>
+                    <div class="imagem-lado">
+                        <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=600&h=400&q=80" 
+                             alt="Pessoa analisando dados complexos em uma tela digital avançada" 
+                             width="600" 
+                             height="400" 
+                             loading="lazy">
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section id="combate" class="section-padding bg-dark text-white" aria-labelledby="title-combate">
+            <div class="container">
+                <div class="text-center-M">
+                    <h2 id="title-combate">A Tríade do Enfrentamento</h2>
+                    <p class="section-subtitle-white">Combater a desinformação exige ações integradas de múltiplos setores da sociedade.</p>
+                </div>
+                <div class="tabela-responsiva">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Responsabilidade Tecnológica</th>
+                                <th>Ação Governamental</th>
+                                <th>Cidadania Ativa (Você)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Desenvolvimento de marcas d'água digitais invisíveis e criptografia em mídias originais pelas Big Techs.</td>
+                                <td>Criação de legislações ágeis que punam a criação maliciosa sem ferir a liberdade de expressão.</td>
+                                <td>Desenvolvimento do ceticismo saudável: verificar fontes e agências de checagem antes de repassar dados.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="interativo" class="section-padding" aria-labelledby="title-interativo">
+            <div class="container">
+                <div class="quiz-box">
+                    <h2 id="title-interativo">Laboratório de Conscientização</h2>
+                    <p>Fortaleça sua imunidade digital. Clique no botão abaixo para extrair uma diretriz prática de combate a boatos algorítmicos.</p>
+                    <button id="btn-dica" type="button" class="btn-secondary">Gerar Diretriz de Segurança</button>
+                    
+                    <div id="painel-dica" class="hidden" role="region" aria-live="polite" aria-labelledby="title-interativo">
+                        <p id="texto-dica"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 - Conscientização sobre Cidadania Digital e IA. Todos os direitos reservados.</p>
+    <footer class="footer-site">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Cidadania Digital & IA</h3>
+                <p>Educação, ética e pensamento crítico para navegar no futuro da internet.</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#contexto">O Desafio</a></li>
+                    <li><a href="#impactos">Impactos</a></li>
+                    <li><a href="#deteccao">Detecção</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>Agências de Checagem</h4>
+                <ul>
+                    <li><a href="https://aosfatos.org/" target="_blank" rel="noopener">Aos Fatos</a></li>
+                    <li><a href="https://lupa.uol.com.br/" target="_blank" rel="noopener">Agência Lupa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Hub de Conscientização Tecnológica. Conteúdo estritamente educacional.</p>
         </div>
     </footer>
 
