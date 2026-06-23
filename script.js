@@ -1,25 +1,24 @@
-// Array com dicas de cidadania digital e checagem de fatos
-const dicas = [
-    "🔍 Sempre verifique a fonte: Veja se portais de notícias confiáveis também estão publicando a mesma informação.",
-    "👀 Olhe os detalhes: Em deepfakes de vídeo, preste atenção se os olhos piscam normalmente ou se os movimentos da boca combinam com o som.",
-    "📅 Cheque a data da publicação: Muitas notícias falsas são fatos antigos tirados de contexto para enganar o público.",
-    "🧠 Não compartilhe por impulso: Se uma notícia te deixou muito irritado ou muito animado, pare e respire antes de repassar.",
-    "🤖 Use ferramentas de checagem: Sites como Lupa, Aos Fatos e Fato ou Fake ajudam a desmentir boatos que circulam na internet."
+// Array contendo diretrizes completas sobre imunidade digital
+const diretrizesSeguranca = [
+    "🔍 Cruzamento de Fontes: Não confie em mídias de autoria desconhecida. Busque a mesma informação em pelo menos dois veículos de imprensa tradicionais e reconhecidos.",
+    "👀 Avaliação de Simetria Craniana: Ao desconfiar de uma imagem de rosto, amplie e analise as orelhas e os brincos. Os algoritmos de IA ainda falham severamente na renderização simétrica de acessórios.",
+    "📅 Contextualização Histórica: Muitas ondas de desinformação utilizam vídeos reais, porém gravados anos atrás em cenários completamente diferentes. Use mecanismos de busca reversa de imagens.",
+    "🧠 Controle de Engajamento Emocional: Se o conteúdo visual desperta ira imediata, pânico ou senso de urgência absurdo, pare. É o gatilho perfeito usado por arquiteturas de fake news para viralização rápida.",
+    "🤖 Análise de Ruído de Fundo: Em áudios clonados por IA, o tom de voz pode parecer idêntico, mas costuma haver ausência de respiração natural e cortes abruptos nas transições de frequência."
 ];
 
-// Seleção dos elementos do HTML
-const botaoDica = document.getElementById('btn-dica');
-const painelDica = document.getElementById('painel-dica');
-const textoDica = document.getElementById('texto-dica');
+// Captura dos elementos do DOM
+const botaoDiretriz = document.getElementById('btn-dica');
+const painelDiretriz = document.getElementById('painel-dica');
+const textoDiretriz = document.getElementById('texto-dica');
 
-// Evento de clique para mostrar uma dica aleatória
-botaoDica.addEventListener('click', () => {
-    // Escolhe um índice aleatório do array de dicas
-    const indiceAleatorio = Math.floor(Math.random() * dicas.length);
+// Execução da lógica interativa
+botaoDiretriz.addEventListener('click', () => {
+    // Escolha aleatória sem repetição idêntica imediata
+    const index = Math.floor(Math.random() * diretrizesSeguranca.length);
     
-    // Define o texto da dica selecionada
-    textoDica.textContent = dicas[indiceAleatorio];
+    textoDiretriz.innerHTML = `<strong>Diretriz Recomendada:</strong> ${diretrizesSeguranca[index]}`;
     
-    // Remove a classe 'hidden' para tornar o painel visível
-    painelDica.classList.remove('hidden');
+    // Apresenta o painel removendo o elemento oculto do CSS
+    painelDiretriz.classList.remove('hidden');
 });
