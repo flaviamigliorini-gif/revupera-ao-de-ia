@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital & IA</title>
+    <title>Cidadania Digital & Inteligência Artificial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <div class="container">
             <h1>Cidadania Digital & IA</h1>
@@ -15,43 +16,52 @@
     </header>
 
     <main class="container">
-        <section class="hero-section">
+        <section class="hero-section" aria-labelledby="hero-title">
             <div class="hero-text">
-                <h2>O Desafio da Verdade na Era Digital</h2>
+                <h2 id="hero-title">O Desafio da Verdade na Era Digital</h2>
                 <p>Com o avanço da Inteligência Artificial, a criação de conteúdos falsos extremamente realistas — as chamadas <strong>deepfakes</strong> — tornou-se um dos maiores desafios para a desinformação e a segurança digital hoje.</p>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Representação conceitual de inteligência artificial e conexões digitais">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&h=400&q=80" 
+                     alt="Conexões de redes neurais iluminadas em um fundo escuro, representando a inteligência artificial"
+                     loading="lazy"
+                     width="600"
+                     height="400">
             </div>
         </section>
 
-        <section class="content-grid">
-            <div class="card">
+        <section class="content-grid" aria-label="Informações sobre Deepfakes e Cidadania">
+            <article class="card">
                 <h3>O que são Deepfakes?</h3>
                 <p>São vídeos, áudios ou fotos criados por redes neurais artificiais que substituem o rosto ou a voz de uma pessoa pela de outra, fazendo-a parecer dizer ou fazer coisas que nunca aconteceram.</p>
-            </div>
-            <div class="card">
+            </article>
+
+            <article class="card">
                 <h3>Impacto na Sociedade</h3>
                 <p>A desinformação em massa pode manipular opiniões, manchar reputações, interferir em processos democráticos e minar a confiança geral nos meios de comunicação tradicionais.</p>
-            </div>
-            <div class="card">
+            </article>
+
+            <article class="card">
                 <h3>Cidadania Digital</h3>
                 <p>Ser um cidadão digital consciente significa desenvolver senso crítico: checar fontes, não compartilhar conteúdos duvidosos e entender o papel da tecnologia no nosso dia a dia.</p>
-            </div>
+            </article>
         </section>
 
-        <section class="quiz-section">
-            <h3>Dica de Segurança Interativa</h3>
+        <section class="quiz-section" aria-labelledby="quiz-title">
+            <h3 id="quiz-title">Dica de Segurança Interativa</h3>
             <p>Como você avalia uma informação que recebe nas redes sociais?</p>
-            <button id="btn-dica">Receber um conselho de checagem</button>
-            <div id="painel-dica" class="hidden">
+            <button id="btn-dica" type="button">Receber um conselho de checagem</button>
+            
+            <div id="painel-dica" class="hidden" role="region" aria-live="polite" aria-labelledby="quiz-title">
                 <p id="texto-dica"></p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Conscientização sobre Cidadania Digital e IA.</p>
+        <div class="container">
+            <p>&copy; 2026 - Conscientização sobre Cidadania Digital e IA. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
