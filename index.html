@@ -3,61 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital e Inteligência Artificial</title>
+    <title>Cidadania Digital & IA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Conexão<span>Consciente</span></a>
-            <button id="theme-button" class="btn-theme" aria-label="Mudar tema visual">
-                <span class="icon-sun">☀️</span>
-                <span class="icon-moon">🌙</span>
-            </button>
-        </div>
-    </nav>
-
-    <main class="main-wrapper">
-        
-        <header class="hero-block">
+    <header>
+        <div class="container">
             <h1>Cidadania Digital & IA</h1>
-            <p>O Impacto das Deepfakes e da Desinformação na Sociedade Modernizada</p>
-        </header>
+            <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+        </div>
+    </header>
 
-        <section class="info-grid">
-            <article class="info-card wide-card">
-                <div class="card-text">
-                    <h2>A Era das Deepfakes</h2>
-                    <p>Com o avanço dos algoritmos de aprendizado profundo (Deep Learning), a criação de mídias sintéticas atingiu um nível de realismo impressionante. Rostos e vozes podem ser clonados perfeitamente, desafiando a nossa habilidade de distinguir o fato da ficção.</p>
-                    <p>A desinformação em massa, potencializada por IA, afeta diretamente processos democráticos e a segurança pessoal dos cidadãos.</p>
-                </div>
-                <picture class="card-image">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Conceito visual de IA e fluxos de dados complexos" loading="lazy">
-                </picture>
-            </article>
-
-            <div class="sub-grid">
-                <div class="pillar-card">
-                    <h3>Educação Digital</h3>
-                    <p>Desenvolver o pensamento crítico é a primeira linha de defesa. Saber questionar a origem e a intenção de um conteúdo antes de interagir.</p>
-                </div>
-                <div class="pillar-card">
-                    <h3>Checagem Técnica</h3>
-                    <p>Observar inconsistências físicas nos arquivos de mídia: padrões de iluminação errados, piscadas ausentes ou falhas nas bordas do rosto.</p>
-                </div>
-                <div class="pillar-card">
-                    <h3>Responsabilidade</h3>
-                    <p>Entender que o compartilhamento irresponsável perpetua o ecossistema da mentira. A checagem deve preceder o clique de envio.</p>
-                </div>
+    <main class="container">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>O Desafio da Verdade na Era Digital</h2>
+                <p>Com o avanço da Inteligência Artificial, a criação de conteúdos falsos extremamente realistas — as chamadas <strong>deepfakes</strong> — tornou-se um dos maiores desafios para a desinformação e a segurança digital hoje.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Representação conceitual de inteligência artificial e conexões digitais">
             </div>
         </section>
 
+        <section class="content-grid">
+            <div class="card">
+                <h3>O que são Deepfakes?</h3>
+                <p>São vídeos, áudios ou fotos criados por redes neurais artificiais que substituem o rosto ou a voz de uma pessoa pela de outra, fazendo-a parecer dizer ou fazer coisas que nunca aconteceram.</p>
+            </div>
+            <div class="card">
+                <h3>Impacto na Sociedade</h3>
+                <p>A desinformação em massa pode manipular opiniões, manchar reputações, interferir em processos democráticos e minar a confiança geral nos meios de comunicação tradicionais.</p>
+            </div>
+            <div class="card">
+                <h3>Cidadania Digital</h3>
+                <p>Ser um cidadão digital consciente significa desenvolver senso crítico: checar fontes, não compartilhar conteúdos duvidosos e entender o papel da tecnologia no nosso dia a dia.</p>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <h3>Dica de Segurança Interativa</h3>
+            <p>Como você avalia uma informação que recebe nas redes sociais?</p>
+            <button id="btn-dica">Receber um conselho de checagem</button>
+            <div id="painel-dica" class="hidden">
+                <p id="texto-dica"></p>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Conexão Consciente. Reflexão e ética no espaço cibernético.</p>
+    <footer>
+        <p>&copy; 2026 - Conscientização sobre Cidadania Digital e IA.</p>
     </footer>
 
     <script src="script.js"></script>
+</body>
 </html>
