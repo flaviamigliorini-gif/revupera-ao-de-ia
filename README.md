@@ -1,1 +1,1 @@
-# revuperação de IA
+# recuperação de IA
