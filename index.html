@@ -3,102 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital & IA</title>
+    <title>Cidadania Digital & IA: O Impacto das Deepfakes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <div class="container">
-            <h1>Conexão Consciente</h1>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#perigos">Os Perigos</a></li>
-                    <li><a href="#como-identificar">Como Identificar</a></li>
-                    <li><a href="#quiz">Teste seus conhecimentos</a></li>
-                </ul>
-            </nav>
+        <div class="container header-flex">
+            <h1>Cidadania<span>Digital</span></h1>
+            <button id="theme-toggle">Alternar Tema</button>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Cidadania Digital e Inteligência Artificial</h2>
-            <p>O Impacto das Deepfakes e da Desinformação na Sociedade. Aprenda a navegar com segurança!</p>
-            <a href="#quiz" class="btn">Fazer o Quiz</a>
-        </div>
-    </section>
+    <main class="container">
+        <section class="hero">
+            <h2>Inteligência Artificial, Deepfakes e Desinformação</h2>
+            <p>Como a evolução tecnológica está moldando a verdade na sociedade moderna e o que podemos fazer para exercer uma cidadania consciente.</p>
+        </section>
 
-    <section id="sobre" class="section">
-        <div class="container grid">
-            <div>
-                <h2>O que são Deepfakes e Desinformação?</h2>
-                <p>Com o avanço da Inteligência Artificial, ficou muito mais fácil criar conteúdos falsos que parecem extremamente reais. <strong>Deepfakes</strong> são vídeos, áudios ou imagens manipulados por IA para mostrar pessoas dizendo ou fazendo coisas que nunca aconteceram.</p>
-                <p>Quando essas tecnologias são usadas para espalhar mentiras de forma automatizada, chamamos de desinformação, o que pode prejudicar a reputação de pessoas e enganar toda a sociedade.</p>
+        <section class="content-section">
+            <div class="text-content">
+                <h3>O que são Deepfakes?</h3>
+                <p>Deepfakes são vídeos, áudios ou imagens gerados por Inteligência Artificial (IA) que imitam de forma realista a voz e a aparência de pessoas reais. Embora a tecnologia tenha usos legítimos no entretenimento, seu uso indevido para espalhar desinformação representa um grande risco para a sociedade.</p>
+                
+                <h3>O Impacto na Sociedade</h3>
+                <p>A proliferação de notícias falsas hiper-realistas pode manipular eleições, arruinar reputações e desgastar a confiança pública nas instituições e na mídia tradicional. Distorcer a realidade nunca foi tão fácil, o que exige uma nova postura dos cidadãos conectados.</p>
             </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/glojuZ7UvIE" title="O que é Deepfake?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Representação conceitual de Inteligência Artificial e distorção de dados">
+                <p class="caption">A IA desafia nossa percepção do que é real no ambiente digital.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="perigos" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center">Os Perigos das Fake News Automatizadas</h2>
-            <div class="grid card-container">
+        <section class="guide-section">
+            <h3>Como Praticar a Cidadania Digital?</h3>
+            <div class="cards-grid">
                 <div class="card">
-                    <h3>Manipulação de Opinião</h3>
-                    <p>Robôs e algoritmos espalham mentiras em massa para mudar o que as pessoas pensam sobre assuntos importantes.</p>
+                    <h4>1. Desconfie e Verifique</h4>
+                    <p>Sempre cheque a fonte da informação. Se um vídeo ou notícia parece absurdo ou chocante demais, verifique em portais de notícias confiáveis.</p>
                 </div>
                 <div class="card">
-                    <h3>Cyberbullying</h3>
-                    <p>Imagens e montagens falsas criadas por IA podem ser usadas para humilhar ou difamar colegas de escola.</p>
+                    <h4>2. Analise os Detalhes</h4>
+                    <p>Deepfakes em vídeo costumam ter pequenas falhas: piscar de olhos não natural, sombras estranhas ou áudio ligeiramente dessincronizado.</p>
                 </div>
                 <div class="card">
-                    <h3>Fraudes e Golpes</h3>
-                    <p>Criação de vozes e rostos conhecidos para enganar familiares e pedir dinheiro ou dados pessoais.</p>
+                    <h4>3. Não Compartilhe na Dúvida</h4>
+                    <p>Quebre o ciclo da desinformação. Só compartilhe conteúdos se tiver certeza absoluta da veracidade deles.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="como-identificar" class="section">
-        <div class="container grid">
-            <div class="image-placeholder">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Análise Digital e Inteligência Artificial">
-            </div>
-            <div>
-                <h2>Como Identificar Mídias Manipuladas</h2>
-                <ul class="check-list">
-                    <li><strong>Preste atenção aos detalhes:</strong> Piscar de olhos artificial, sombras estranhas ou falhas ao redor do rosto.</li>
-                    <li><strong>Analise o áudio:</strong> Vozes robóticas, falta de entonação natural ou ruídos de fundo inexplicáveis.</li>
-                    <li><strong>Desconfie do absurdo:</strong> Se a notícia parece ultrajante ou chocante demais, há grandes chances de ser falsa.</li>
-                    <li><strong>Use ferramentas de busca:</strong> Procure a mesma notícia em portais de jornalismo confiáveis ou agências de checagem.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="quiz" class="section bg-dark text-light">
-        <div class="container">
-            <h2 class="text-center">Desafio da Cidadania Digital</h2>
-            <p class="text-center">Você sabe diferenciar o real do falso? Teste suas habilidades!</p>
-            
-            <div class="quiz-box">
-                <div id="pergunta-container">
-                    <p id="pergunta">Carregando pergunta...</p>
-                    <div id="alternativas"></div>
-                </div>
-                <div id="resultado" class="hidden"></div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="container text-center">
-            <p>&copy; 2026 - Projeto Escolar de Cidadania Digital. Todos os direitos reservados.</p>
-        </div>
+        <p>&copy; 2026 - Guia de Cidadania Digital e IA. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
